@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="<< En Dieu seul nous croyons. Tous les autres doivent apporter des données.>>"
+			>
+			<div style="text-align: center;">
+				<div style="display: inline-block; border-radius: 50%;  padding: 10px;">
+				  <img
+					  width="400"
+					  height="400"
+					  src="/assets/abc2.jpg"
+					  alt="Jeanine White at work with a colleague"
+				  />
+				</div>
+			  </div>
+		
+			</Hero>
+
+			<section>
+				<div class="section-title">
+					<h4>background</h4>
+					<p>CedricZambo@outlook.com</p>
+					<p>Sfax, Tunisie</p>
+					<p>+216 53 52 95 80</p>
+					<p>Cedric Zambo</p>
+				</div>
+				<div class="content">
+					<p>
+						Plongez-vous dans mon univers, je suis <strong>Cedric Zambo</strong>, <strong>un artisan des données </strong> , jonglant avec l'art
+						 subtil de <strong>l'ingénierie </strong> et de <strong> l'analyse des données </strong>. Je vous ouvre les portes de ma passion, 
+						 un monde où chaque bit et chaque octet racontent une histoire fascinante. Avec <strong>une maîtrise en 
+						 génie logiciel </strong>, je façonne non seulement <strong>le développement </strong>, mais je sculpte également les données,
+						  les façonnant en de précieuses pépites d'information. Explorez avec moi les richesses insoupçonnées 
+						  de la <strong>donnée </strong>, <strong>une mine d'or</strong> à découvrir et à exploiter ensemble.
+					</p>
+					<!-- <p>
+						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
+						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
+						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
+						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+					</p>
+					
+					<p>
+						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
+						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
+						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
+						pretium fusce.
+					</p>-->
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<div class="education-item">
+						<h3>Diplôme d'Ingénieur en Informatique</h3>
+						<p>Institut Polytechnique des Sciences Avancées de Sfax, Sfax, Tunisie</p>
+						<p>2020-2023</p>
+					</div>
+					<div class="education-item">
+						<h3>Diplôme de Classe Préparatoire, Option : MP</h3>
+						<p>Institut Polytechnique des Sciences Avancées de Sfax, Sfax, Tunisie</p>
+						<p>2018-2020</p>
+					</div>
+					<div class="education-item">
+						<h3>Diplôme du Baccalauréat, Série D</h3>
+						<p>Collège Alfred Saker, Douala, Cameroun</p>
+						<p>2015-2016</p>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Certifications</h2>
+				<div class="content">
+					<div class="certification">
+						<h3>Certification Certiport</h3>
+						<ul>
+							<li>HTML/CSS</li>
+							<li>JAVA</li>
+							<li>PYTHON</li>
+							<li>DATA ANALYTICS</li>
+							<li>JAVASCRIPT</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			
+			
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>officia unde omnis</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

@@ -1,0 +1,129 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Full Stack</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Industry Leader</h2>
+		<p>Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Strategy-Minded</h2>
+		<p>Urna porttitor rhoncus dolor purus non enim praesent ornare.</p>
+	</div>
+</section>
+<section id="developpement" class="skill-section">
+	<h2>Développement</h2>
+	<div class="skill-table">
+	  <div class="skill-item"><img src="/assets/Angular.png" alt="Logo Compétence 1"></div>
+	  <div class="skill-item"><img src="/assets/python.png" alt="Logo Compétence 2"></div>
+	  <div class="skill-item"><img src="/assets/java.png" alt="Logo Compétence 3"></div>
+	  <div class="skill-item"><img src="/assets/Angular.png" alt="Logo Compétence 4"></div>
+	</div>
+  </section>
+  <section id="Ingénierie des données" class="skill-section">
+	<h2>Ingénierie des données</h2>
+	<div class="skill-table">
+	  <div class="skill-item"><img src="/assets/mongodb.png" alt="Logo Compétence 5"></div>
+	  <div class="skill-item"><img src="/assets/sql.png" alt="Logo Compétence 6"></div>
+	  <div class="skill-item"><img src="/assets/sqlserver.png" alt="Logo Compétence 7"></div>
+	  <div class="skill-item"><img src="/assets/firebase.png" alt="Logo Compétence 8"></div>
+	</div>
+  </section>
+  <section id="Analyse des données" class="skill-section">
+	<h2>Analyse des données </h2>
+	<div class="skill-table">
+	  <div class="skill-item"><img src="/assets/pandas.png" alt="Logo Compétence 9"></div>
+	  <div class="skill-item"><img src="/assets/python.png" alt="Logo Compétence 10"></div>
+	  <div class="skill-item"><img src="/assets/Excell.png" alt="Logo Compétence 11"></div>
+	  <div class="skill-item"><img src="/assets/scikit.png" alt="Logo Compétence 12"></div>
+	</div>
+  </section>
+  <section id="Data Visualization  " class="skill-section">
+	<h2>Data Visualization </h2>
+	<div class="skill-table">
+	  <div class="skill-item"><img src="/assets/matplotlib.png" alt="Logo Compétence 14"></div>
+	  <div class="skill-item"><img src="/assets/powerBI.png" alt="Logo Compétence 13"></div> 
+	  <div class="skill-item"><img src="/assets/seaborn.png" alt="Logo Compétence 15"></div>
+	  <!-- <div class="skill-item"><img src="/assets/Angular.png" alt="Logo Compétence 16"></div>-->
+	</div>
+  </section>
+  
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+
+	.skill-section {
+  margin-bottom: 20px;
+}
+
+.skill-table {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-item img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+</style>
